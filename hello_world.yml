@@ -16,4 +16,5 @@
        debug:
          msg: "Hello user!"
      - name: Check NTP service
-       service: name=ntpd state=started
+       yum: name=ntp state=latest
+#       service: name=ntpd state=started
