@@ -4,3 +4,16 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
+        
+- hosts: all
+  name: configuration play
+  user: ec2-user
+  gather_facts: true
+
+  tasks:
+     - name: Hello Message
+      debug:
+        msg: "Hello World!"
+     
+#     name: Check NTP service
+#       service: name=ntpd state=started
