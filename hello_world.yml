@@ -12,9 +12,8 @@
   gather_facts: true
 
   tasks:
-     - name: Hello Message
+     - name: Hello User
        debug:
          msg: "Hello user!"
-     
-#     name: Check NTP service
-#       service: name=ntpd state=started
+     - name: Check NTP service
+       service: name=ntpd state=started
