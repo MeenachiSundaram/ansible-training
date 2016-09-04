@@ -1,3 +1,4 @@
+---
 - name: Hello World Sample
   hosts: all
   tasks:
@@ -5,15 +6,15 @@
       debug:
         msg: "Hello World!"
         
-- hosts: ami_2051294a
-  name: configuration play
+- name: configuration play
+  hosts: ami_2051294a
   user: ec2-user
   gather_facts: true
 
   tasks:
      - name: Hello Message
        debug:
-         msg: "Hello World!"
+         msg: "Hello user!"
      
 #     name: Check NTP service
 #       service: name=ntpd state=started
