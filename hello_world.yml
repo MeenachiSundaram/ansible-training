@@ -8,7 +8,7 @@
         
 - name: configuration play
   hosts: ami_2051294a
-  user: ec2-user
+  user: ansible
   gather_facts: true
 
   tasks:
