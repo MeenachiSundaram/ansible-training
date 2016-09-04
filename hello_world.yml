@@ -24,4 +24,5 @@
   tasks:
      - name: Update Packages
        apt: update_cache=yes
-       sudo: yes
+       become: yes
+       become_method: sudo
