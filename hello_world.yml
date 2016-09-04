@@ -15,8 +15,9 @@
      - name: Hello User
        debug:
          msg: "Hello user!"
-     - name: update
-       run: yum -y update
+     - name: install updates
+       yum: update_cache=yes
+       yum: name=* state=latest
      - name: install the latest version of Apache
        yum: name=httpd state=latest
 #     - name: Check NTP service
