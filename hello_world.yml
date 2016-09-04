@@ -28,4 +28,5 @@
        become_method: sudo
      - name: install the latest version of Apache
        apt: name=apache2 state=latest
+     - name: Stop Apache service
        service: name=apache2 state=stopped
