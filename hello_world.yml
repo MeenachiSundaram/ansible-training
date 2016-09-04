@@ -5,7 +5,7 @@
       debug:
         msg: "Hello World!"
         
-- hosts: all
+- hosts: ami_2051294a
   name: configuration play
   user: ec2-user
   gather_facts: true
