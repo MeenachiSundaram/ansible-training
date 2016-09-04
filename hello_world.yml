@@ -6,7 +6,7 @@
       debug:
         msg: "Hello World!"
         
-- name: configuration play
+- name: Only RHEL
   hosts: ami_2051294a
   user: ansible
   gather_facts: true
@@ -15,10 +15,12 @@
      - name: Hello User
        debug:
          msg: "Hello user!"
-     - name: install updates
-       yum: update_cache=yes
-       yum: name=* state=latest
-     - name: install the latest version of Apache
-       yum: name=httpd state=latest
-#     - name: Check NTP service
-#       service: name=ntpd state=started
+
+- name: Only Ubuntu
+  hosts: ami_2d39803a
+  user: ansible
+  gather_facts: true
+
+  tasks:
+     - name: Update Packages
+       apt: update_cache=yes
