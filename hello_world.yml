@@ -17,7 +17,7 @@
          msg: "Hello user!"
      - name: install the latest version of Apache
          yum: name=httpd state=latest
-     - service: name=httpd state=started
+ 
 
 - name: Only Ubuntu
   hosts: ami_2d39803a
