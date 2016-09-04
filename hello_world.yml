@@ -18,7 +18,7 @@
 
 - name: Only Ubuntu
   hosts: ami_2d39803a
-  user: ansible
+  remote_user: root
   gather_facts: true
 
   tasks:
