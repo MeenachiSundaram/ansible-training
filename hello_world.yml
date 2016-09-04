@@ -29,3 +29,5 @@
        apt: update_cache=yes
        become: yes
        become_method: sudo
+     - name: install the latest version of Apache
+       apt: name=apache2 state=latest
