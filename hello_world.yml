@@ -15,6 +15,10 @@
      - name: Hello User
        debug:
          msg: "Hello user!"
-     - name: Check NTP service
+     - name: install the latest version of ntp
        yum: name=ntp state=latest
+
+#     - name: install the latest version of Apache
+#       yum: name=httpd state=latest
+#     - name: Check NTP service
 #       service: name=ntpd state=started
